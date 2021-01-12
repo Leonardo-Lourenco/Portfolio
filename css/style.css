@@ -1,0 +1,612 @@
+
+/*
+	Link da fonte usada: 
+	https://fonts.google.com/specimen/Open+Sans+Condensed?sidebar.open=true&selection.family=Open+Sans+Condensed:ital,wght@1,300
+
+	Imagens: 01  https://www.flaticon.com/
+			 02  https://www.pexels.com/pt-br/	
+
+	Gerar textos aleatorios:https://br.lipsum.com/feed/html
+
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Roboto:wght@100&display=swap');
+
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+}
+
+
+
+/* dele: .toggle
+	
+	MENU BURGUER 
+
+
+*/
+
+.fundo-menu 
+{
+	position: fixed;
+	top: 30px;
+	right: 50px;
+	width: 50px;
+	height: 50px;
+	background: #3F7FBF url(../img/menu.png);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.fundo-menu.active
+{
+	background: #3F7FBF url(../img/cancel.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+
+
+
+
+
+
+
+/* SEÇÃO PRINCIPAL BANNER COM MINHA FOTO E TEXTOS*/
+section
+{
+	padding: 100px;
+	min-height: 100vh;
+}
+
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+
+
+.banner .imgBanner
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 100%;
+}
+
+.banner .imgBanner img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+
+.banner .conteudoBx, .sidebar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 500px);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px;
+
+}
+
+.textoLogo
+{
+	position: absolute;
+	top: 40px;
+	left: 100px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background:#3F7FBF ;
+	color: #fff;
+	padding: 0 5px;
+}
+
+.banner .conteudoBx h4
+{
+	font-size: 1.5em;
+	color: #333;
+	font-weight: 30px;
+
+}
+
+.banner .conteudoBx h4 span
+{
+	color: #3F3FBF;
+	font-size: 1.5em;
+	font-weight: 700;
+
+}
+
+.banner .conteudoBx h2
+{
+	font-size: 3em;
+	color: #333;
+	line-height: 1em;
+}
+
+p
+{
+	font-size: 1.1em;
+	margin: 20px 0;
+	font-weight: 300;
+}
+
+.btn
+{
+	background: #3F3FBF;
+	color: #fff;
+	padding: 10px 30px;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 2px;
+
+}
+
+
+
+/* MENU */
+
+.sidebar
+{
+	position: fixed;
+	background: #3F7FBF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	padding: 40px;
+	z-index: 100;
+	right: -100%;
+
+
+}
+
+
+.sidebar ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.sidebar ul li
+{
+	list-style: none;
+}
+
+.sidebar ul li a
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px 0;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}
+
+.sidebar ul li a:hover
+{
+	color: red;
+}
+
+/*OBS FAZER DEPOIS QUE CRIAR A FUNÇÃO JS*/
+.sidebar.active
+{
+	right: 0%;
+}
+
+
+.redesSCI
+{
+	position: absolute;
+	left: 100px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.redesSCI li
+{
+	margin-right: 10px;
+	list-style: none;
+}
+
+.redesSCI li img
+{
+	transform: scale(0.5);
+	opacity: 0.7;
+	width: 60px;
+	height: 60px;
+}
+
+.redesSCI li img:hover
+{
+	transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+/* Seção SOBRE */
+.title
+{
+	width: 100%;
+	text-align: center;
+}
+
+
+.title h2
+{
+	position: relative;
+	color: #3F3FBF;
+	font-size: 1.8em;
+	font-weight: 700;
+	letter-spacing: 1px;
+
+}
+
+.title p
+{
+	max-width: 700px;
+	display: inline-block;
+}
+
+.title h2::before 
+{
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	width: 60px;
+	height: 4px;
+	background: #000;
+}
+
+
+
+
+
+
+
+/* SEÇÃO SOBRE */
+
+
+.sobre
+{
+	background:#3F7FBF;
+}
+
+.title.branco h2
+{
+	color: #fff;
+}
+
+.title.branco p
+{
+	color: #fff;
+}
+
+.title.branco h2::before
+{
+	background:#fff;
+}
+
+
+.sobre
+{
+	background:blue;
+}
+
+.sobre .conteudo
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+
+.sobre .conteudo .textBx
+{
+	min-width: 49%;
+	width: 49%;
+}
+
+.sobre .conteudo .textBx p
+{
+	color: white;
+}
+
+.sobre .conteudo .imgBx
+{
+	margin-left: 40px;
+
+}
+
+.sobre .conteudo .imgBx img
+{
+	max-width: 100%;	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    Seção SERVICOS    */
+
+.servicos .conteudo
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+.servicos .conteudo .servicosBx
+{
+	padding: 40px 20px;
+	max-width: 340px;
+	margin: 20px;
+	transition: 0.5s;
+	text-align: center;
+	background:#f5f5f5;
+
+}
+
+
+.servicos .conteudo .servicosBx:hover
+{
+	background:#000;
+}
+
+.servicos .conteudo .servicosBx img
+{
+	max-width: 80px;
+	transition: 0.5s;
+}
+
+
+.servicos .conteudo .servicosBx h2
+{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	transition: 0.5s;
+}
+
+.servicos .conteudo .servicosBx:hover h2
+{
+	color: white;
+}
+
+.servicos .conteudo .servicosBx p
+{
+	margin: 0;
+	transition: 0.5s;
+}
+
+.servicos .conteudo .servicosBx:hover p
+{
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Seção de PROJETOS */
+
+.trabalho .conteudo
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.trabalho .conteudo .trabalhoBx
+{
+	position: relative;
+	width: 265px;
+	height: 265px;
+	margin: 10px;
+	transition: 0.5s;
+	text-align: center;
+}
+
+.trabalho .conteudo .trabalhoBx .imgBx,
+.trabalho .conteudo .trabalhoBx .textBx
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.trabalho .conteudo .trabalhoBx .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+.trabalho .conteudo .trabalhoBx  .textBx
+{
+	background:#000;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.trabalho .conteudo .trabalhoBx:hover .textBx
+{
+	
+	opacity: 1;
+	
+}
+
+.trabalho .conteudo .trabalhoBx .textBx h3
+{
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTATO */
+
+.contato
+{
+	background: #3F7FBF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.contato .contatoFORMULARIO
+{
+	position: relative;
+	width: 700px;
+	margin-top: 20px;
+}
+
+.contato .contatoFORMULARIO .row
+{
+	width: 100%;
+	display: flex;
+}
+
+.contato .contatoFORMULARIO .row .col50
+{
+	width: 50%;
+	margin: 10px;
+}
+
+.contato .contatoFORMULARIO .row .col100
+{
+	width: 100%;
+	margin: 10px;
+	text-align: center;
+}
+
+.contato .contatoFORMULARIO .row input,
+.contato .contatoFORMULARIO .row textarea
+{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	outline: none;
+	background:#fff;
+	color: black;
+	font-size: 16px;
+	resize: none;
+}
+
+
+.contato .contatoFORMULARIO .row textarea
+{
+	height: 100px;
+}
+
+.contato .contatoFORMULARIO .row input[type="submit"]
+{
+	background:white;
+	color: black;
+	padding: 10px 30px;
+	display: inline-block;
+	font-weight: 500;
+	letter-spacing: 2px;
+	cursor: pointer;
+	max-width: 150px;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+.copy
+{
+	color: white;
+	background: black;
+	text-align: center;
+	padding: 10px;
+}
+
